@@ -8,7 +8,7 @@ on:
         options:
           - nonprod
           - prod
-  jobs:
+jobs:
     workflow-test:
       runs-on: ubuntu-latest
       steps:
