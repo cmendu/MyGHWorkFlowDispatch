@@ -21,6 +21,6 @@ jobs:
             ref: main
         - name: Lets try this
           run: |
-             result=$((${{ github.event.inputs.number1 }} * ${{ github.event.inputs.number2 }}))
+             result=$((${{ github.event.inputs.number1 }} * ${{ github.event.inputs.number2 }} * 2))
              echo "The result is $result"
       
