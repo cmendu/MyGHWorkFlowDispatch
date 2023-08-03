@@ -1,0 +1,19 @@
+name: Dipsatch work flow
+on:
+  workflow_dispatch:
+    inputs:
+      env_name:
+        required: true
+        type: choice
+        options:
+          - nonprod
+          - prod
+  jobs:
+    workflow-test:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Lets try this
+          run: |
+           result = 5*5
+           echo "The result is $result"
+        
