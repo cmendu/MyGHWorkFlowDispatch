@@ -16,8 +16,11 @@ jobs:
     workflow-test:
       runs-on: ubuntu-latest
       steps:
+        - uses: actions/checkout@v3
+          with:
+            ref: main
         - name: Lets try this
           run: |
-           result=$((${{ github.event.inputs.number1 }} * ${{ github.event.inputs.number2 }}))
-           echo "The result is $result"
+             result=$((${{ github.event.inputs.number1 }} * ${{ github.event.inputs.number2 }}))
+             echo "The result is $result"
       
