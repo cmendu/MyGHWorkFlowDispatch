@@ -8,12 +8,16 @@ on:
         options:
           - nonprod
           - prod
+      number1:
+        description: number1
+      number2:
+        description: numbrer
 jobs:
     workflow-test:
       runs-on: ubuntu-latest
       steps:
         - name: Lets try this
           run: |
-           result = 5*5
+           result=$((${{ github.event.inputs.number1 }} * ${{ github.event.inputs.number2 }}))
            echo "The result is $result"
       
